@@ -1,0 +1,449 @@
+/* style.css - AI Career Copilot */
+/* Clean Modern UI with Black Header/Footer */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background: #f5f5f5;
+    color: #1a1a1a;
+    line-height: 1.5;
+}
+
+/* Header - Black */
+header {
+    background: #000000;
+    border-bottom: 1px solid #333;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+}
+
+/* Logo / Brand Name */
+.logo {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: #cccccc;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #cccccc;
+}
+
+/* Main Content */
+main.container {
+    padding: 48px 24px;
+    min-height: calc(100vh - 140px);
+}
+
+/* Headings */
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.welcome-text {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Card */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+}
+
+.card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 120px;
+    transition: border-color 0.2s;
+    background: white;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+form p {
+    font-size: 14px;
+    color: #666;
+    margin: -8px 0 0 0;
+}
+
+input[type="file"] {
+    padding: 8px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+input[type="file"]::file-selector-button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #d0d0d0;
+    background: white;
+    color: #1a1a1a;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 12px;
+    transition: all 0.2s;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: #f5f5f5;
+    border-color: #000000;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+    background: white;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+input[type="text"]::placeholder {
+    color: #999;
+}
+
+button {
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 8px;
+    width: auto;
+    align-self: flex-start;
+}
+
+button:hover {
+    background: #333333;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Auth Pages (Login/Signup) */
+.auth-container {
+    min-height: calc(100vh - 140px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+}
+
+.auth-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+}
+
+.auth-card h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.auth-card .sub-text {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+
+.auth-card form {
+    gap: 16px;
+}
+
+.auth-card input {
+    padding: 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.auth-card button {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.auth-links {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.auth-links a,
+.switch-auth a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.auth-links a:hover,
+.switch-auth a:hover {
+    text-decoration: underline;
+}
+
+.switch-auth {
+    text-align: center;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Results Section */
+.results-container {
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+    margin-top: 32px;
+    border: 1px solid #e0e0e0;
+}
+
+.result-section {
+    margin-bottom: 28px;
+}
+
+.result-section:last-child {
+    margin-bottom: 0;
+}
+
+.result-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+ul li {
+    padding: 6px 14px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #1a1a1a;
+    border: 1px solid #e0e0e0;
+    transition: all 0.2s;
+}
+
+ul li:hover {
+    background: #e8e8e8;
+    transform: translateY(-1px);
+}
+
+/* Different colors for different sections */
+.result-section:first-of-type ul li {
+    background: #e8f0fe;
+    border-color: #c5d9f0;
+    color: #1a3a6a;
+}
+
+.result-section:nth-of-type(2) ul li {
+    background: #fee8e8;
+    border-color: #f5c5c5;
+    color: #8b0000;
+}
+
+.result-section:nth-of-type(3) ul li {
+    background: #e8f5e8;
+    border-color: #c5e0c5;
+    color: #2d5a2d;
+}
+
+.result-section:nth-of-type(4) ul li {
+    background: #fff5e8;
+    border-color: #f0dbc5;
+    color: #8a5a2a;
+}
+
+/* Error Message */
+.error-message {
+    background: #fee8e8;
+    border-left: 3px solid #d32f2f;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.error-message p {
+    color: #d32f2f;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* History Page */
+.history-card {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.2s;
+}
+
+.history-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.history-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.history-card p strong {
+    color: #1a1a1a;
+}
+
+.history-card hr {
+    margin: 16px 0;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+.history-card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 16px 0 8px 0;
+    color: #1a1a1a;
+}
+
+/* Footer - Black */
+footer {
+    background: #000000;
+    border-top: 1px solid #333;
+    text-align: center;
+    padding: 24px;
+    color: #999;
+    font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    main.container {
+        padding: 24px 16px;
+    }
+    
+    .card,
+    .auth-card,
+    .results-container {
+        padding: 20px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    nav {
+        gap: 20px;
+    }
+    
+    button {
+        width: 100%;
+    }
+    
+    header .container {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}

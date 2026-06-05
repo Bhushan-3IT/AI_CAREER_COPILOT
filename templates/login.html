@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+{%block content%}
+<div class="auth-container">
+    <div class="auth-card">
+        <h2>Welcome Back!</h2>
+        <p class="sub-text">
+            login here to access your account. 
+        </p>
+
+        <form method="POST">
+            <input type="email" name="email" placeholder="Enter tour email" required>
+            <input type="password" name="password" placeholder="Enter password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="auth-links">
+            <a href="#">Forgot Password</a>
+        </div>
+
+        <p class="switch-auth">
+            Don't have an account? <a href="/signup">Sign Up</a>
+        </p>
+    </div>
+
+</div>
+
+{%endblock%}

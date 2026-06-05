@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Welcome, {{ user }}</h2>
+<p class="welcome-text">Here's your AI Career Assistant</p>
+
+<div class="card">
+    <h3>Resume Analyzer</h3>
+    <form method="POST" enctype="multipart/form-data">
+        <textarea name="resume" placeholder="Paste your resume (optional)"></textarea>
+        <p>OR upload file:</p>
+        <input type="file" name="file">
+        <input type="text" name="role" placeholder="What do you want to become? (e.g. Backend Engineer)" required>
+        <button type="submit">Analyze</button>
+    </form>
+</div>
+
+{% if result %}
+<div class="results-container">
+    {% if result.error %}
+    <div class="error-message">
+        <p>❌ Error: {{ result.error }}</p>
+    </div>
+    {% endif %}
+
+    <div class="result-section">
+        <h3>📋 Skills Found</h3>
+        <ul>
+            {% for s in result.get("skills",[]) %}
+            <li>{{ s }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="result-section">
+        <h3>⚠️ Missing Skills</h3>
+        <ul>
+            {% for s in result.get("missing-skills",[]) %}
+            <li>{{ s }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="result-section">
+        <h3>🗺️ Roadmap</h3>
+        <ul>
+            {% for s in result.get("roadmap",[]) %}
+            <li>{{ s }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="result-section">
+        <h3>💡 Interview Questions</h3>
+        <ul>
+            {% for s in result.get("interview_quetions",[]) %}
+            <li>{{ s }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
